@@ -1,15 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="refresh" content="5;url=http://manjok.shop/44/" />
-    
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="부덩스튜디오">
     <meta name="naver-site-verification" content="87a65249d0a49e8ac7f063a61c871e01ca5fd348" />
     <meta property="og:image" content="thumbimg2.png"/>
@@ -17,7 +12,6 @@
     <meta property="og:description" content="부덩스튜디오">
     <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://shop.budungstudio.com/">
-    <body style="overflow-x: hidden"></body>
     <link rel="icon" href="Frame 6.png" type="image/png">
     <style>
         body, html {
@@ -36,9 +30,23 @@
     </style>
     <title>부덩스튜디오 - 로블록스 스크립트 NO.1</title>
 </head>
-    <body style="overflow-x: hidden"></body>
+<body style="overflow-x: hidden">
     <h2>2024/12/25일부로 부덩스튜디오의 온라인 판매가 만족샵으로 이관되었습니다.</h2>
-    <p>잠시 후 만족샵으로 리다이렉트 됩니다.<p/>
-        <p><br>※ 기존과 동일하게 만족샵에서 구매하실 수 있습니다.</p>
+    <p id="redirect-message">잠시 후 만족샵으로 리다이렉트 됩니다... 5</p>
+    <p><br>※ 기존과 동일하게 만족샵에서 구매하실 수 있습니다.</p>
+
+    <script>
+        let countdown = 5;
+        const messageElement = document.getElementById('redirect-message');
+
+        const timer = setInterval(() => {
+            countdown--;
+            if (countdown > 0) {
+                messageElement.textContent = `잠시 후 만족샵으로 리다이렉트 됩니다... ${countdown}`;
+            } else {
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
